@@ -38,11 +38,11 @@ module.exports = function (grunt) {
           templateName: function(filename) {
             // Infer the name of the template from the filename
             return filename.replace(/\.hbs$/, '')
-                           .replace(/^static\/templates\//, '');
+                           .replace(/^static\/hbs\//, '');
           }
         },
         files: {
-          "static/javascripts/app/templates.js": "static/templates/**/*.hbs"
+          "static/js/app/templates.js": "static/hbs/**/*.hbs"
         }
       }
     },
@@ -56,15 +56,15 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      javascripts: {
-        files: 'static/javascripts/**/*.*',
+      javascript: {
+        files: 'static/js/**/*.*',
         options: {
           livereload: true
         }
       },
 
       handlebars: {
-        files: 'static/templates/**/*.hbs',
+        files: 'static/hbs/**/*.hbs',
         tasks: ['emberTemplates'],
         options: {
           livereload: true

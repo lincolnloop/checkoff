@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: '/javascripts/vendor',
+  baseUrl: '/js/vendor',
   paths: {
     app: '../app'
   },
