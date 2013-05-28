@@ -1,0 +1,27 @@
+<nav class="top-bar">
+  <ul class="title-area">
+    <li class="name">
+      <h1>{{#linkTo index}}Checkoff{{/linkTo}}</h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="left">
+      <li class="has-form">
+        <form>
+          <input type="text" id="right-label" placeholder="Search">
+        </form>
+      </li>
+      <li class="divider"></li>
+      <li>{{#linkTo templates.index}}Templates{{/linkTo}}</li>
+      <li>{{#linkTo projects.index}}Projects{{/linkTo}}</li>
+    </ul>
+  </section>
+</nav>
+
+<div class="row">
+    <div class="large-12 columns">
+    {{outlet}}
+    </div>
+</div>

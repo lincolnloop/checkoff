@@ -1,0 +1,14 @@
+{{#each template in model}}
+  <div class="panel">
+    <h4>
+      {{#linkTo templates.view template}}{{template.name}}{{/linkTo}}
+      <div class="right">
+        <sup><span class="round label">{{#linkTo templates.edit template}}edit{{/linkTo}}</span></sup>
+        <sup><span class="round alert label">{{#linkTo templates.delete template}}delete{{/linkTo}}</span></sup>
+      </div>
+    </h4>
+    {{#if templates.description}}{{templates.description}}{{/if}}
+  </div>
+{{/each}}
+
+{{#linkTo templates.new}}+ New Template{{/linkTo}}

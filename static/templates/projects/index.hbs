@@ -1,0 +1,15 @@
+{{#each project in model}}
+  <div class="panel">
+    <h4>
+      {{#linkTo projects.view project}}{{project.name}}{{/linkTo}}
+      <div class="right">
+        {{#if project.link}}<sup><span class="round label"><a {{bindAttr href="project.link"}}>link</a></span></sup>{{/if}}
+        <sup><span class="round label">{{#linkTo projects.edit project}}edit{{/linkTo}}</span></sup>
+        <sup><span class="round alert label">{{#linkTo projects.delete project}}delete{{/linkTo}}</span></sup>
+      </div>
+    </h4>
+    {{#if project.description}}{{project.description}}{{/if}}
+  </div>
+{{/each}}
+
+{{#linkTo projects.new}}+ New Project{{/linkTo}}

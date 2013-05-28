@@ -1,0 +1,5 @@
+# We're not using Node.JS for anything in production, so it's fine to ignore
+# the node_modules directory.
+node_modules
+
+.sass-cache
