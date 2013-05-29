@@ -1,19 +1,14 @@
-<div class="row">
-  <div class="large-12 columns">
-    <label {{bindAttr for="nameField.field_id"}}>Name</label>
-    {{view Ember.TextField viewName='nameField'
-                           valueBinding='model.name'
-                           name='name'
-                           placeholder="The name of your checklist template"}}
-  </div>
-</div>
-
-<div class="row">
-  <div class="large-12 columns">
-    <label {{bindAttr for="descriptionField.field_id"}}>Description</label>
-    {{view Ember.TextArea viewName='descriptionField'
-                           valueBinding='model.description'
-                           name='description'
-                           placeholder="An optional description"}}
-  </div>
-</div>
+<p>
+  <label {{bindAttr for="nameField.field_id"}}>Name</label>
+  {{view Ember.TextField viewName='nameField'
+                         valueBinding='model.name'
+                         name='name'
+                         placeholder="The name of your checklist template"}}
+</p>
+<p>
+  <label {{bindAttr for="descriptionField.field_id"}}>Description</label>
+  {{view Ember.TextArea viewName='descriptionField'
+                         valueBinding='model.description'
+                         name='description'
+                         placeholder="An optional description"}}
+</p>

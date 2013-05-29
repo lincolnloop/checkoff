@@ -3,12 +3,10 @@
 
   <p>Are you sure you want to delete this project?</p>
 
-  <div class="alert-box alert radius">There is no undo.</div>
+  <div class="alert alert-danger">There is no undo.</div>
 
-  <div class="row right">
-    <div class="large-12 columns">
-      {{#linkTo projects.index class="button"}}Cancel{{/linkTo}}
-      <button type="submit" class="alert">Delete</button>
-    </div>
+  <div class="pull-right">
+    {{#linkTo projects.index class="btn btn-default"}}Cancel{{/linkTo}}
+    <button type="submit" class="btn btn-danger">Delete</button>
   </div>
 </form>

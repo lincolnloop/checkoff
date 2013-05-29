@@ -6,7 +6,6 @@ From the root project directory:
 
     $ npm install -g grunt-cli
     $ npm install
-    $ sudo gem install compass zurb-foundation
     $ grunt
 
 This fires up a static server that offers up 'static/index.html' file, or

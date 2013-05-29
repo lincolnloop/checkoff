@@ -7,8 +7,8 @@
     "grunt-contrib-watch": "~0.4.3",
     "grunt-contrib-livereload": "~0.1.2",
     "grunt-contrib-connect": "~0.3.0",
-    "grunt-contrib-compass": "~0.2.0",
     "grunt-ember-templates": "~0.4.6",
-    "connect-modrewrite": "~0.3.10"
+    "connect-modrewrite": "~0.3.10",
+    "grunt-contrib-less": "~0.5.2"
   }
 }

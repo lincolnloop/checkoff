@@ -1,0 +1,8 @@
+@import "bootstrap/bootstrap.less";
+
+// Correct issues with Ember metamorph elements and button groups
+.btn-group > .btn:first-of-type:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  margin-left: 0;
+}

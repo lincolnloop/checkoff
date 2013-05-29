@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             return [
               connect.logger({immediate: true, format: 'dev'}),
               modRewrite([
-                '!\\.html|\\images|\\.js|\\.css|\\ico$ /index.html'
+                '!\\..*$ /index.html'
               ]),
               lrSnippet,
               connect.static(options.base)
@@ -47,10 +47,13 @@ module.exports = function (grunt) {
       }
     },
 
-    compass: {
+    less: {
       dev: {
         options: {
-          config: "config.rb"
+          paths: ['static/less']
+        },
+        files: {
+          'static/css/style.css': 'static/less/style.less'
         }
       }
     },
@@ -71,9 +74,9 @@ module.exports = function (grunt) {
         }
       },
 
-      sass: {
-        files: 'static/sass/**/*.*',
-        tasks: ['compass'],
+      less: {
+        files: 'static/less/**/*.*',
+        tasks: ['less'],
         options: {
           livereload: true
         }
@@ -92,9 +95,9 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-ember-templates');
+  grunt.loadNpmTasks('grunt-contrib-less');
 
-  grunt.registerTask('develop', ['compass', 'emberTemplates', 'connect', 'watch']);
+  grunt.registerTask('develop', ['less', 'emberTemplates', 'connect', 'watch']);
   grunt.registerTask('default', ['develop']);
 };

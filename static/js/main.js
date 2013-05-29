@@ -24,18 +24,18 @@ require.config({
       exports: 'DS.LSAdapter'
     },
 
-    'foundation/foundation': {
-      deps: ['jquery'],
-      exports: 'Foundation'
-    },
-    'foundation/foundation.alerts': ['foundation/foundation'],
-    'foundation/foundation.cookie': ['foundation/foundation'],
-    'foundation/foundation.dropdown': ['foundation/foundation'],
-    'foundation/foundation.forms': ['foundation/foundation'],
-    'foundation/foundation.placeholder': ['foundation/foundation'],
-    'foundation/foundation.section': ['foundation/foundation'],
-    'foundation/foundation.tooltips': ['foundation/foundation'],
-    'foundation/foundation.topbar': ['foundation/foundation'],
+    'bootstrap/affix': ['jquery'],
+    'bootstrap/alert': ['jquery'],
+    'bootstrap/button': ['jquery'],
+    'bootstrap/carousel': ['jquery'],
+    'bootstrap/collapse': ['jquery'],
+    'bootstrap/dropdown': ['jquery'],
+    'bootstrap/modal': ['jquery'],
+    'bootstrap/popover': ['jquery'],
+    'bootstrap/scrollspy': ['jquery'],
+    'bootstrap/tab': ['jquery'],
+    'bootstrap/tooltip': ['jquery'],
+    'bootstrap/transition': ['jquery'],
 
     'app/templates': {
       deps: ['handlebars', 'ember'],
@@ -47,6 +47,22 @@ require.config({
 // Initialize the app.
 require([
 
+  'jquery',
+
+  // The order of this is significant
+  'bootstrap/transition',
+  'bootstrap/alert',
+  'bootstrap/button',
+  'bootstrap/carousel',
+  'bootstrap/collapse',
+  'bootstrap/dropdown',
+  'bootstrap/modal',
+  'bootstrap/tooltip',
+  'bootstrap/popover',
+  'bootstrap/scrollspy',
+  'bootstrap/tab',
+  'bootstrap/affix',
+
   'app/app',
   'app/templates',
   'app/models/checklist',
@@ -55,7 +71,6 @@ require([
   'app/models/project',
   'app/models/template',
   'app/models/user',
-  'app/views/application',
   'app/controllers/templates/new',
   'app/controllers/templates/edit',
   'app/controllers/templates/delete',
