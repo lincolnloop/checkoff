@@ -1,33 +1,16 @@
-// Just here to handle injecting the livereload snippet - can be removed if
-// this is ever added to grunt-contrib-watch, and the grunt-contrib-livereload
-// module can then be uninstalled.
-var path = require('path');
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-
-// Rewrite requests
-var modRewrite = require('connect-modrewrite');
-
 module.exports = function (grunt) {
   'use strict';
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // This is just a basic static server for development
-    connect: {
-      server: {
+    less: {
+      dev: {
         options: {
-          base: 'static',
-          middleware: function(connect, options) {
-            return [
-              connect.logger({immediate: true, format: 'dev'}),
-              modRewrite([
-                '!\\..*$ /index.html'
-              ]),
-              lrSnippet,
-              connect.static(options.base)
-            ];
-          }
+          paths: ['checkoff/static/less']
+        },
+        files: {
+          'checkoff/static/css/style.css': 'checkoff/static/less/style.less'
         }
       }
     },
@@ -35,69 +18,38 @@ module.exports = function (grunt) {
     emberTemplates: {
       compile: {
         options: {
-          templateName: function(filename) {
-            // Infer the name of the template from the filename
-            return filename.replace(/\.hbs$/, '')
-                           .replace(/^static\/hbs\//, '');
+          templateName: function (sourceFile) {
+            return sourceFile.replace(/checkoff\/static\/hbs\//, '');
           }
         },
         files: {
-          "static/js/app/templates.js": "static/hbs/**/*.hbs"
-        }
-      }
-    },
-
-    less: {
-      dev: {
-        options: {
-          paths: ['static/less']
-        },
-        files: {
-          'static/css/style.css': 'static/less/style.less'
+          'checkoff/static/js/app/templates.js': 'checkoff/static/hbs/**/*.hbs'
         }
       }
     },
 
     watch: {
       javascript: {
-        files: 'static/js/**/*.*',
-        options: {
-          livereload: true
-        }
+        files: ['checkoff/static/js/**/*.js'],
+        options: {livereload: true}
       },
-
       handlebars: {
-        files: 'static/hbs/**/*.hbs',
+        files: 'checkoff/static/hbs/**/*.hbs',
         tasks: ['emberTemplates'],
-        options: {
-          livereload: true
-        }
+        options: {livereload: true}
       },
-
       less: {
-        files: 'static/less/**/*.*',
+        files: 'checkoff/static/less/**/*.less',
         tasks: ['less'],
-        options: {
-          livereload: true
-        }
-      },
-
-      index: {
-        files: 'static/index.html',
-        options: {
-          livereload: true
-        }
+        options: {livereload: true}
       }
-
     }
 
   });
 
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ember-templates');
   grunt.loadNpmTasks('grunt-contrib-less');
 
-  grunt.registerTask('develop', ['less', 'emberTemplates', 'connect', 'watch']);
-  grunt.registerTask('default', ['develop']);
+  grunt.registerTask('default', ['less', 'emberTemplates', 'watch']);
 };

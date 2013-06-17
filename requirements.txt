@@ -1,0 +1,7 @@
+-e .
+Django>1.5,<1.6
+dj_database_url==0.2.1
+boto==2.9.5
+django-storages==1.1.8
+
+newrelic
