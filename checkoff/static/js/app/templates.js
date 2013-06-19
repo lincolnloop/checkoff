@@ -33,7 +33,7 @@ function program3(depth0,data) {
 function program5(depth0,data) {
   
   
-  data.buffer.push("Templates");
+  data.buffer.push("Checklists");
   }
 
 function program7(depth0,data) {
