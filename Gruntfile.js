@@ -19,11 +19,11 @@ module.exports = function (grunt) {
       compile: {
         options: {
           templateName: function (sourceFile) {
-            return sourceFile.replace(/checkoff\/static\/hbs\//, '');
+            return sourceFile.replace(/checkoff\/static\/templates\//, '');
           }
         },
         files: {
-          'checkoff/static/js/app/templates.js': 'checkoff/static/hbs/**/*.hbs'
+          'checkoff/static/js/app/templates.js': 'checkoff/static/templates/**/*.handlebars'
         }
       }
     },
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         options: {livereload: true}
       },
       handlebars: {
-        files: 'checkoff/static/hbs/**/*.hbs',
+        files: 'checkoff/static/templates/**/*.handlebars',
         tasks: ['emberTemplates'],
         options: {livereload: true}
       },
