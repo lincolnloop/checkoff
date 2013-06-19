@@ -75,9 +75,9 @@ require([
   'app/checklists/controllers/template-edit',
   'app/checklists/controllers/template-delete',
   'app/projects/models/project',
-  'app/projects/controllers/projects/new',
-  'app/projects/controllers/projects/edit',
-  'app/projects/controllers/projects/delete',
+  'app/projects/controllers/new',
+  'app/projects/controllers/edit',
+  'app/projects/controllers/delete',
   'app/auth/models/user',
   'app/router'
 

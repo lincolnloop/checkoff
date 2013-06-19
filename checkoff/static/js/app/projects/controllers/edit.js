@@ -2,7 +2,7 @@ define([
 
   'ember',
   'app/app',
-  'app/controllers/projects/new'
+  'app/projects/controllers/new'
 
 ], function (Ember, Checkoff) {
   'use strict';

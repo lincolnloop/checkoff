@@ -1,4 +1,4 @@
-define(['app/app', 'ember-data'], function(Checkoff, DS) {
+define(['app/app', 'ember-data'], function (Checkoff, DS) {
   'use strict';
 
   Checkoff.ChecklistItem = DS.Model.extend({

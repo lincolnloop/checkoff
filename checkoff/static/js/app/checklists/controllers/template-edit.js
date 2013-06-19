@@ -2,7 +2,7 @@ define([
 
   'ember',
   'app/app',
-  'app/controllers/templates/new'
+  'app/checklists/controllers/template-new'
 
 ], function (Ember, Checkoff) {
   'use strict';
