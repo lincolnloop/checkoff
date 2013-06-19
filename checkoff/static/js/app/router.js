@@ -2,8 +2,8 @@ define([
 
   'ember',
   'app/app',
-  'app/checklists/routes/templates/index',
-  'app/checklists/routes/templates/new',
+  'app/checklists/routes/index',
+  'app/checklists/routes/new',
   'app/projects/routes/index',
   'app/projects/routes/new'
 
@@ -15,11 +15,11 @@ define([
   });
 
   Checkoff.Router.map(function () {
-    this.resource('templates', function () {
+    this.resource('checklists', function () {
       this.route('new');
-      this.route('view', {path: '/:template_id'});
-      this.route('edit', {path: '/:template_id/edit'});
-      this.route('delete', {path: '/:template_id/delete'});
+      this.route('view', {path: '/:checklist_id'});
+      this.route('edit', {path: '/:checklist_id/edit'});
+      this.route('delete', {path: '/:checklist_id/delete'});
     });
 
     this.resource('projects', function () {

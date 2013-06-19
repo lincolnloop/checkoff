@@ -7,10 +7,10 @@ define(['app/app', 'ember-data'], function (Checkoff, DS) {
     email: DS.attr('string'),
     isActive: DS.attr('boolean'),
 
-    templates: DS.hasMany('Checkoff.Template'),
+    checklists: DS.hasMany('Checkoff.Checklist'),
     projects: DS.hasMany('Checkoff.Project'),
 
-    fullName: function() {
+    fullName: function () {
       return this.get('firstName') + ' ' + this.get('lastName');
     }.property('firstName', 'lastName')
   });

@@ -3,9 +3,10 @@ define(['app/app', 'ember-data'], function (Checkoff, DS) {
 
   Checkoff.Checklist = DS.Model.extend({
     name: DS.attr('string'),
+    description: DS.attr('string'),
 
-    project: DS.belongsTo('Checkoff.Project'),
-    checklistItems: DS.hasMany('Checkoff.ChecklistItem')
+    items: DS.hasMany('Checkoff.Item'),
+    user: DS.belongsTo('Checkoff.User')
   });
 
   return Checkoff.Checklist;

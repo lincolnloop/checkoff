@@ -5,7 +5,7 @@ define(['app/app', 'ember-data'], function (Checkoff, DS) {
     order: DS.attr('number'),
     isDone: DS.attr('boolean'),
 
-    checklist: DS.belongsTo('Checkoff.Checklist'),
+    checklist: DS.belongsTo('Checkoff.ProjectChecklist'),
     item: DS.belongsTo('Checkoff.Item')
   });
 
