@@ -13,7 +13,20 @@ define([
   'use strict';
 
   // Sadly, this needs to be global for model associations to work.
-  var Checkoff = window.Checkoff = Ember.Application.create();
+  var Checkoff = window.Checkoff = Ember.Application.create({
+    LOG_TRANSITIONS: true,
+    LOG_BINDINGS: true,
+    LOG_STACKTRACE_ON_DEPRECATION: true
+    // LOG_VIEW_LOOKUPS: true
+  });
+
+  // Ember.onerror = function(error) {
+  //   Em.$.ajax('/error-notification', 'POST', {
+  //     stack: error.stack,
+  //     otherInformation: 'exception message'
+  //   });
+  // }
+
 
   Checkoff.VERSION = '0.0.1';
 

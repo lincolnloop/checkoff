@@ -63,6 +63,8 @@ require([
   'bootstrap/tab',
   'bootstrap/affix',
 
+  // Once the app is more complete, break this apart so that the whole thing
+  // doesn't have to be loaded all at once.
   'app/app',
   'app/templates',
   'app/models/checklist',
@@ -77,6 +79,6 @@ require([
   'app/controllers/projects/new',
   'app/controllers/projects/edit',
   'app/controllers/projects/delete',
-  'app/routes'
+  'app/router'
 
 ], function () {});
