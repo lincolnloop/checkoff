@@ -7,12 +7,12 @@ urlpatterns = patterns('',
     url(r'^$',
         view=TemplateView.as_view(template_name='index.html'),
         name='index'),
-    url(r'dashboard',
+    url(r'projects',
         view=TemplateView.as_view(template_name='index.html'),
-        name='dashboard'),
-    url(r'posts',
+        name='projects'),
+    url(r'templates',
         view=TemplateView.as_view(template_name='index.html'),
-        name='posts'),
+        name='templates'),
 )
 
 
