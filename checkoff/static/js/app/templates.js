@@ -42,7 +42,7 @@ function program7(depth0,data) {
   data.buffer.push("Projects");
   }
 
-  data.buffer.push("<div class=\"navbar navbar-inverse navbar-static-top\">\n  <div class=\"container\">\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\".navbar-inverse-collapse\">\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    ");
+  data.buffer.push("<div class=\"navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"container\">\n    <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\".navbar-inverse-collapse\">\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n      <span class=\"icon-bar\"></span>\n    </button>\n    ");
   hashContexts = {'class': depth0};
   hashTypes = {'class': "STRING"};
   options = {hash:{
@@ -275,7 +275,7 @@ function program8(depth0,data) {
 function program10(depth0,data) {
   
   
-  data.buffer.push("<span class=\"glyphicon glyphicon-plus\"></span> New Template");
+  data.buffer.push("<span class=\"glyphicon glyphicon-plus\"></span> New Checklist");
   }
 
   hashTypes = {};
@@ -288,7 +288,7 @@ function program10(depth0,data) {
   options = {hash:{
     'class': ("btn btn-success")
   },inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklist.new", options) : helperMissing.call(depth0, "linkTo", "checklist.new", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklists.new", options) : helperMissing.call(depth0, "linkTo", "checklists.new", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n</div>\n");
   return buffer;

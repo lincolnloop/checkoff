@@ -20,6 +20,8 @@ ALLOWED_HOSTS = [
     'localhost:8000',
 ]
 
+INTERNAL_IPS = ('127.0.0.1',)
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -78,6 +80,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.core.context_processors.media',
     'django.core.context_processors.static',
+    'django.core.context_processors.debug',
 )
 
 APPEND_SLASH = False
