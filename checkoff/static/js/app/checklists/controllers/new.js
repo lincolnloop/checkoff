@@ -6,17 +6,17 @@ define([
 ], function (Ember, Checkoff) {
   'use strict';
 
-  Checkoff.TemplatesNewController = Ember.ObjectController.extend({
-    save: function() {
+  Checkoff.ChecklistsNewController = Ember.ObjectController.extend({
+    save: function () {
       this.get('store').save();
-      this.transitionToRoute('templates.index');
+      this.transitionToRoute('checklists.index');
     },
 
-    cancel: function() {
+    cancel: function () {
       this.get('store').get('defaultTransaction').rollback();
-      this.transitionToRoute('templates.index');
+      this.transitionToRoute('checklists.index');
     }
   });
 
-  return Checkoff.TemplatesNewController;
+  return Checkoff.ChecklistsNewController;
 });

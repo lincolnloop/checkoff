@@ -7,7 +7,7 @@ define([
 ], function (Ember, Checkoff) {
   'use strict';
 
-  Checkoff.TemplatesEditController = Checkoff.TemplatesNewController;
+  Checkoff.ChecklistsEditController = Checkoff.ChecklistsNewController;
 
-  return Checkoff.TemplatesEditController;
+  return Checkoff.ChecklistsEditController;
 });

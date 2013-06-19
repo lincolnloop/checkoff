@@ -6,13 +6,13 @@ define([
 ], function (Ember, Checkoff) {
   'use strict';
 
-  Checkoff.TemplatesDeleteController = Ember.ObjectController.extend({
-    delete: function() {
+  Checkoff.ChecklistsDeleteController = Ember.ObjectController.extend({
+    delete: function () {
       this.get('model').deleteRecord();
       this.get('store').get('defaultTransaction').commit();
-      this.transitionToRoute('templates.index');
+      this.transitionToRoute('checklists.index');
     }
   });
 
-  return Checkoff.TemplatesDeleteController;
+  return Checkoff.ChecklistsDeleteController;
 });
