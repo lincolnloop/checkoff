@@ -6,7 +6,7 @@ define(['app/app', 'ember-data'], function (Checkoff, DS) {
     helpText: DS.attr('string'),
     link: DS.attr('string'),
 
-    template: DS.belongsTo('Checkoff.Template')
+    template: DS.belongsTo('Checkoff.Checklist')
   });
 
   return Checkoff.Item;

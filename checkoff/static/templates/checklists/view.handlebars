@@ -1,9 +1,9 @@
-{{#linkTo templates.index class="btn btn-primary"}}<span class="glyphicon glyphicon-chevron-left"></span> Templates{{/linkTo}}
+{{#linkTo checklists.index class="btn btn-primary"}}<span class="glyphicon glyphicon-chevron-left"></span> Checklists{{/linkTo}}
 <div class="pull-right">
   <div class="btn-group">
     {{#if model.link}}<a {{bindAttr href="model.link"}} class="btn btn-default"><span class="glyphicon glyphicon-link"></span></a>{{/if}}
-    {{#linkTo templates.edit model class="btn btn-primary"}}<span class="glyphicon glyphicon-pencil"></span>{{/linkTo}}
-    {{#linkTo templates.delete model class="btn btn-danger"}}<span class="glyphicon glyphicon-remove"></span>{{/linkTo}}
+    {{#linkTo checklists.edit model class="btn btn-primary"}}<span class="glyphicon glyphicon-pencil"></span>{{/linkTo}}
+    {{#linkTo checklists.delete model class="btn btn-danger"}}<span class="glyphicon glyphicon-remove"></span>{{/linkTo}}
   </div>
 </div>
 

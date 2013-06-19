@@ -1,20 +1,20 @@
-{{#each template in model}}
+{{#each checklist in model}}
   <div class="well well-small">
     <p>
-      {{#linkTo templates.view template class="btn btn-primary"}}
-        {{template.name}} <span class="glyphicon glyphicon-chevron-right"></span>
+      {{#linkTo checklists.view checklist class="btn btn-primary"}}
+        {{checklist.name}} <span class="glyphicon glyphicon-chevron-right"></span>
       {{/linkTo}}
       <span class="pull-right">
         <span class="btn-group">
-          {{#linkTo templates.edit template class="btn btn-primary"}}<span class="glyphicon glyphicon-pencil"></span>{{/linkTo}}
-          {{#linkTo templates.delete template class="btn btn-danger"}}<span class="glyphicon glyphicon-remove"></span>{{/linkTo}}
+          {{#linkTo checklist.edit checklist class="btn btn-primary"}}<span class="glyphicon glyphicon-pencil"></span>{{/linkTo}}
+          {{#linkTo checklist.delete checklist class="btn btn-danger"}}<span class="glyphicon glyphicon-remove"></span>{{/linkTo}}
         </span>
       </span>
     </p>
-    {{#if template.description}}<p>{{template.description}}</p>{{/if}}
+    {{#if checklist.description}}<p>{{checklist.description}}</p>{{/if}}
   </div>
 {{/each}}
 
 <div class="pull-right">
-  {{#linkTo templates.new class="btn btn-success"}}<span class="glyphicon glyphicon-plus"></span> New Template{{/linkTo}}
+  {{#linkTo checklist.new class="btn btn-success"}}<span class="glyphicon glyphicon-plus"></span> New Template{{/linkTo}}
 </div>

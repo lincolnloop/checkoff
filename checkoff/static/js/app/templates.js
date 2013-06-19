@@ -60,7 +60,7 @@ function program7(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "templates.index", options) : helperMissing.call(depth0, "linkTo", "templates.index", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklists.index", options) : helperMissing.call(depth0, "linkTo", "checklists.index", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("</li>\n        <li>");
   hashTypes = {};
@@ -154,13 +154,13 @@ function program1(depth0,data) {
   hashTypes = {};
   hashContexts = {};
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "model.name", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("?</h4>\n\n  <p>Are you sure you want to delete this template?</p>\n\n  <div class=\"alert alert-danger\">There is no undo.</div>\n\n  <div class=\"pull-right\">\n    ");
+  data.buffer.push("?</h4>\n\n  <p>Are you sure you want to delete this checklist?</p>\n\n  <div class=\"alert alert-danger\">There is no undo.</div>\n\n  <div class=\"pull-right\">\n    ");
   hashContexts = {'class': depth0};
   hashTypes = {'class': "STRING"};
   options = {hash:{
     'class': ("btn btn-default")
   },inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "projects.index", options) : helperMissing.call(depth0, "linkTo", "projects.index", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklists.index", options) : helperMissing.call(depth0, "linkTo", "checklists.index", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n    <button type=\"submit\" class=\"btn btn-danger\">Delete</button>\n  </div>\n</form>\n");
   return buffer;
@@ -187,7 +187,7 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.partial),stack1 ? stack1.call(depth0, "templates/fields", options) : helperMissing.call(depth0, "partial", "templates/fields", options))));
+  data.buffer.push(escapeExpression(((stack1 = helpers.partial),stack1 ? stack1.call(depth0, "checklists/fields", options) : helperMissing.call(depth0, "partial", "checklists/fields", options))));
   data.buffer.push("\n  </fieldset>\n\n  ");
   hashTypes = {};
   hashContexts = {};
@@ -212,7 +212,7 @@ function program1(depth0,data) {
   options = {hash:{
     'class': ("btn btn-primary")
   },inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "templates.view", "template", options) : helperMissing.call(depth0, "linkTo", "templates.view", "template", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklists.view", "checklist", options) : helperMissing.call(depth0, "linkTo", "checklists.view", "checklist", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n      <span class=\"pull-right\">\n        <span class=\"btn-group\">\n          ");
   hashContexts = {'class': depth0};
@@ -220,7 +220,7 @@ function program1(depth0,data) {
   options = {hash:{
     'class': ("btn btn-primary")
   },inverse:self.noop,fn:self.program(4, program4, data),contexts:[depth0,depth0],types:["ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "templates.edit", "template", options) : helperMissing.call(depth0, "linkTo", "templates.edit", "template", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklist.edit", "checklist", options) : helperMissing.call(depth0, "linkTo", "checklist.edit", "checklist", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n          ");
   hashContexts = {'class': depth0};
@@ -228,12 +228,12 @@ function program1(depth0,data) {
   options = {hash:{
     'class': ("btn btn-danger")
   },inverse:self.noop,fn:self.program(6, program6, data),contexts:[depth0,depth0],types:["ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "templates.delete", "template", options) : helperMissing.call(depth0, "linkTo", "templates.delete", "template", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklist.delete", "checklist", options) : helperMissing.call(depth0, "linkTo", "checklist.delete", "checklist", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n        </span>\n      </span>\n    </p>\n    ");
   hashTypes = {};
   hashContexts = {};
-  stack2 = helpers['if'].call(depth0, "template.description", {hash:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
+  stack2 = helpers['if'].call(depth0, "checklist.description", {hash:{},inverse:self.noop,fn:self.program(8, program8, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n  </div>\n");
   return buffer;
@@ -244,7 +244,7 @@ function program2(depth0,data) {
   data.buffer.push("\n        ");
   hashTypes = {};
   hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "template.name", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "checklist.name", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push(" <span class=\"glyphicon glyphicon-chevron-right\"></span>\n      ");
   return buffer;
   }
@@ -267,7 +267,7 @@ function program8(depth0,data) {
   data.buffer.push("<p>");
   hashTypes = {};
   hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "template.description", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "checklist.description", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("</p>");
   return buffer;
   }
@@ -280,7 +280,7 @@ function program10(depth0,data) {
 
   hashTypes = {};
   hashContexts = {};
-  stack1 = helpers.each.call(depth0, "template", "in", "model", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
+  stack1 = helpers.each.call(depth0, "checklist", "in", "model", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n\n<div class=\"pull-right\">\n  ");
   hashContexts = {'class': depth0};
@@ -288,7 +288,7 @@ function program10(depth0,data) {
   options = {hash:{
     'class': ("btn btn-success")
   },inverse:self.noop,fn:self.program(10, program10, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "templates.new", options) : helperMissing.call(depth0, "linkTo", "templates.new", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklist.new", options) : helperMissing.call(depth0, "linkTo", "checklist.new", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n</div>\n");
   return buffer;
@@ -307,11 +307,11 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "save", {hash:{
     'on': ("submit")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push(">\n  <fieldset>\n    <legend>New Template</legend>\n    ");
+  data.buffer.push(">\n  <fieldset>\n    <legend>New Checklist</legend>\n    ");
   hashTypes = {};
   hashContexts = {};
   options = {hash:{},contexts:[depth0],types:["STRING"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  data.buffer.push(escapeExpression(((stack1 = helpers.partial),stack1 ? stack1.call(depth0, "templates/fields", options) : helperMissing.call(depth0, "partial", "templates/fields", options))));
+  data.buffer.push(escapeExpression(((stack1 = helpers.partial),stack1 ? stack1.call(depth0, "checklists/fields", options) : helperMissing.call(depth0, "partial", "checklists/fields", options))));
   data.buffer.push("\n  </fieldset>\n\n  ");
   hashTypes = {};
   hashContexts = {};
@@ -330,7 +330,7 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
 function program1(depth0,data) {
   
   
-  data.buffer.push("<span class=\"glyphicon glyphicon-chevron-left\"></span> Templates");
+  data.buffer.push("<span class=\"glyphicon glyphicon-chevron-left\"></span> Checklists");
   }
 
 function program3(depth0,data) {
@@ -374,7 +374,7 @@ function program9(depth0,data) {
   options = {hash:{
     'class': ("btn btn-primary")
   },inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "templates.index", options) : helperMissing.call(depth0, "linkTo", "templates.index", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklists.index", options) : helperMissing.call(depth0, "linkTo", "checklists.index", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n<div class=\"pull-right\">\n  <div class=\"btn-group\">\n    ");
   hashTypes = {};
@@ -387,7 +387,7 @@ function program9(depth0,data) {
   options = {hash:{
     'class': ("btn btn-primary")
   },inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0,depth0],types:["ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "templates.edit", "model", options) : helperMissing.call(depth0, "linkTo", "templates.edit", "model", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklists.edit", "model", options) : helperMissing.call(depth0, "linkTo", "checklists.edit", "model", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n    ");
   hashContexts = {'class': depth0};
@@ -395,7 +395,7 @@ function program9(depth0,data) {
   options = {hash:{
     'class': ("btn btn-danger")
   },inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0,depth0],types:["ID","ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data};
-  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "templates.delete", "model", options) : helperMissing.call(depth0, "linkTo", "templates.delete", "model", options));
+  stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "checklists.delete", "model", options) : helperMissing.call(depth0, "linkTo", "checklists.delete", "model", options));
   if(stack2 || stack2 === 0) { data.buffer.push(stack2); }
   data.buffer.push("\n  </div>\n</div>\n\n<h3>");
   hashTypes = {};

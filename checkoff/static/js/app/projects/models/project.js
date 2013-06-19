@@ -6,7 +6,7 @@ define(['app/app', 'ember-data'], function (Checkoff, DS) {
     description: DS.attr('string'),
     link: DS.attr('string'),
 
-    checklists: DS.hasMany('Checkoff.Checklist'),
+    checklists: DS.hasMany('Checkoff.ProjectChecklist'),
     user: DS.belongsTo('Checkoff.User')
   });
 
