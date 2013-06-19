@@ -6,6 +6,6 @@
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-contrib-less": "~0.5.2",
-    "grunt-ember-templates": "~0.4.7"
+    "grunt-ember-templates": "~0.4.8"
   }
 }
