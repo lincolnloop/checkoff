@@ -2,7 +2,10 @@ define([
 
   'ember',
   'app/app',
-  'app/projects/models/project'
+  'app/checklists/routes/templates/index',
+  'app/checklists/routes/templates/new',
+  'app/projects/routes/index',
+  'app/projects/routes/new'
 
 ], function (Ember, Checkoff) {
   'use strict';
@@ -25,30 +28,6 @@ define([
       this.route('edit', {path: '/:project_id/edit'});
       this.route('delete', {path: '/:project_id/delete'});
     });
-  });
-
-  Checkoff.TemplatesIndexRoute = Ember.Route.extend({
-    model: function () {
-      return Checkoff.Template.find();
-    }
-  });
-
-  Checkoff.TemplatesNewRoute = Ember.Route.extend({
-    model: function () {
-      return Checkoff.Template.createRecord();
-    }
-  });
-
-  Checkoff.ProjectsIndexRoute = Ember.Route.extend({
-    model: function () {
-      return Checkoff.Project.find();
-    }
-  });
-
-  Checkoff.ProjectsNewRoute = Ember.Route.extend({
-    model: function () {
-      return Checkoff.Project.createRecord();
-    }
   });
 
   return Checkoff.Router;
