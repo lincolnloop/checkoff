@@ -2,8 +2,10 @@ define([
 
   'ember',
   'app/app',
+  'app/checklists/routes/base',
   'app/checklists/routes/index',
   'app/checklists/routes/new',
+  'app/projects/routes/base',
   'app/projects/routes/index',
   'app/projects/routes/new'
 

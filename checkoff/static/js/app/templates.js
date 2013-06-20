@@ -77,21 +77,6 @@ function program7(depth0,data) {
   
 });
 
-Ember.TEMPLATES["checklists"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [3,'>= 1.0.0-rc.4'];
-helpers = helpers || Ember.Handlebars.helpers; data = data || {};
-  var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
-
-
-  data.buffer.push("<div id=\"projects\" class=\"row\">\n  <div class=\"col col-lg-12\">\n    ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n  </div>\n</div>\n");
-  return buffer;
-  
-});
-
 Ember.TEMPLATES["checklists/_fields"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [3,'>= 1.0.0-rc.4'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
@@ -111,7 +96,7 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
     'viewName': ("nameField"),
     'valueBinding': ("model.name"),
     'name': ("name"),
-    'placeholder': ("The name of your checklist template")
+    'placeholder': ("The name of your checklist")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("\n</p>\n<p>\n  <label ");
   hashContexts = {'for': depth0};
@@ -129,6 +114,21 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
     'placeholder': ("An optional description")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("\n</p>\n");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["checklists/base"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [3,'>= 1.0.0-rc.4'];
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("<div id=\"projects\" class=\"row\">\n  <div class=\"col col-lg-12\">\n    ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("\n  </div>\n</div>\n");
   return buffer;
   
 });
@@ -421,21 +421,6 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   
 });
 
-Ember.TEMPLATES["projects"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [3,'>= 1.0.0-rc.4'];
-helpers = helpers || Ember.Handlebars.helpers; data = data || {};
-  var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
-
-
-  data.buffer.push("<div id=\"projects\" class=\"row\">\n  <div class=\"col col-lg-12\">\n    ");
-  hashTypes = {};
-  hashContexts = {};
-  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
-  data.buffer.push("\n  </div>\n</div>");
-  return buffer;
-  
-});
-
 Ember.TEMPLATES["projects/_fields"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [3,'>= 1.0.0-rc.4'];
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
@@ -488,6 +473,21 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
     'placeholder': ("An optional link, to Ginger perhaps")
   },contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
   data.buffer.push("\n</p>\n");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["projects/base"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [3,'>= 1.0.0-rc.4'];
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  var buffer = '', hashTypes, hashContexts, escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("<div id=\"projects\" class=\"row\">\n  <div class=\"col col-lg-12\">\n    ");
+  hashTypes = {};
+  hashContexts = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashContexts:hashContexts,hashTypes:hashTypes,data:data})));
+  data.buffer.push("\n  </div>\n</div>\n");
   return buffer;
   
 });
