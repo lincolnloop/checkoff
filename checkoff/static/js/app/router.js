@@ -1,16 +1,13 @@
-define([
-
-  'ember',
-  'app/app',
-  'app/checklists/routes/base',
-  'app/checklists/routes/index',
-  'app/checklists/routes/new',
-  'app/projects/routes/base',
-  'app/projects/routes/index',
-  'app/projects/routes/new'
-
-], function (Ember, Checkoff) {
+define(function (require) {
   'use strict';
+  var Checkoff = require('app/app');
+
+  require('app/checklists/routes/base');
+  require('app/checklists/routes/index');
+  require('app/checklists/routes/new');
+  require('app/projects/routes/base');
+  require('app/projects/routes/index');
+  require('app/projects/routes/new');
 
   Checkoff.Router.reopen({
     location: 'history'

@@ -1,5 +1,7 @@
-define(['app/app', 'ember-data'], function (Checkoff, DS) {
+define(function (require) {
   'use strict';
+  var Checkoff = require('app/app'),
+    DS = require('ember-data');
 
   Checkoff.User = DS.Model.extend({
     firstName: DS.attr('string'),

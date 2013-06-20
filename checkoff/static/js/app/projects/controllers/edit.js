@@ -1,11 +1,8 @@
-define([
-
-  'ember',
-  'app/app',
-  'app/projects/controllers/new'
-
-], function (Ember, Checkoff) {
+define(function (require) {
   'use strict';
+  var Checkoff = require('app/app');
+
+  require('app/projects/controllers/new');
 
   Checkoff.ProjectsEditController = Checkoff.ProjectsNewController;
 

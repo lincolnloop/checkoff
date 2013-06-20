@@ -1,10 +1,7 @@
-define([
-
-  'ember',
-  'app/app',
-
-], function (Ember, Checkoff) {
+define(function (require) {
   'use strict';
+  var Ember = require('ember'),
+    Checkoff = require('app/app');
 
   Checkoff.ChecklistsRoute = Ember.Route.extend({
     renderTemplate: function () {

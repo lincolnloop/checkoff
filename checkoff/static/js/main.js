@@ -81,4 +81,4 @@ require([
   'app/auth/models/user',
   'app/router'
 
-], function () {});
+]);
