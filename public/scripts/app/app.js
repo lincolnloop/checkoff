@@ -1,15 +1,13 @@
 define(function (require) {
   'use strict';
   var Backbone = require('backbone'),
-      Logger = require('app/logger'),
+      logger = require('app/logger'),
       Handlebars = require('handlebars'),
       Marionette = require('backbone.marionette'),
       AppRouter = require('app/router'),
-      AppLayout = require('app/layout');
+      appLayout = require('app/layout');
 
-  var logger = new Logger(),
-      Checkoff = new Marionette.Application(),
-      appLayout = new AppLayout();
+  var Checkoff = new Marionette.Application();
 
   Checkoff.VERSION = '0.1.0';
 

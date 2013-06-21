@@ -1,10 +1,8 @@
 define(function (require) {
   'use strict';
   var Backbone = require('backbone'),
-      AppLayout = require('app/layout'),
-      IndexView = require('app/index'),
-      appLayout = new AppLayout(),
-      indexView = new IndexView();
+      appLayout = require('app/layout'),
+      indexView = require('app/index');
 
   var AppRouter = Backbone.Router.extend({
     initialize: function () {},

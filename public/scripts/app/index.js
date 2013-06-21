@@ -7,5 +7,5 @@ define(function (require) {
     template: Templates['index']
   });
 
-  return IndexView;
+  return new IndexView();
 });

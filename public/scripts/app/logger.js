@@ -35,5 +35,5 @@ define(function (require) {
 
   });
 
-  return Logger;
+  return new Logger();
 });
