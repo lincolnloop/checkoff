@@ -18,6 +18,8 @@ module.exports = function (grunt) {
     handlebars: {
       compile: {
         options: {
+          amd: true,
+          namespace: 'Templates',
           processName: function (sourceFile) {
             return sourceFile.replace(/public\/templates\//, '')
                              .replace(/\.handlebars$/, '');

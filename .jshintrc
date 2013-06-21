@@ -19,6 +19,7 @@
   "trailing": true,
   "smarttabs": true,
   "white": true,
+  "sub": true,
 
   // Predefined globals whom JSHint will ignore.
   "browser": true,

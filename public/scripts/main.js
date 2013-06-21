@@ -30,11 +30,6 @@ require.config({
     'bootstrap/tab': ['jquery'],
     'bootstrap/tooltip': ['jquery'],
     'bootstrap/transition': ['jquery'],
-
-    'app/templates': {
-      deps: ['handlebars'],
-      exports: 'JST'
-    }
   }
 });
 
