@@ -122,8 +122,7 @@ VAR_ROOT = os.path.join(os.path.dirname(PYTHON_BIN), 'var')
 if not os.path.exists(VAR_ROOT):
     os.mkdir(VAR_ROOT)
 
-TEMPLATE_DIRS = (os.path.join(PROJECT_MODULE_PATH, "templates"),)
-STATICFILES_DIRS = (os.path.join(PROJECT_MODULE_PATH, "static"),)
+STATICFILES_DIRS = (os.path.join(PROJECT_PATH, "public"),)
 
 
 # ------------
@@ -140,7 +139,7 @@ AWS_PRELOAD_METADATA = True
 AWS_REDUCED_REDUNDANCY = True
 AWS_QUERYSTRING_AUTH = False
 
-STATIC_URL = 'https://s3.amazonaws.com/{}/static/'.format(AWS_STORAGE_BUCKET_NAME)
+STATIC_URL = 'https://s3.amazonaws.com/{}/'.format(AWS_STORAGE_BUCKET_NAME)
 MEDIA_URL = 'https://s3.amazonaws.com/{}/media/'.format(AWS_STORAGE_BUCKET_NAME)
 
 

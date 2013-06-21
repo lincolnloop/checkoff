@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: '/static/scripts/vendor',
+  baseUrl: '/public/scripts/vendor',
   paths: {
     app: '../app'
   },
@@ -9,6 +9,13 @@ require.config({
     },
     'handlebars': {
       exports: 'Handlebars'
+    },
+    'underscore': {
+      exports: '_'
+    },
+    'backbone': {
+      deps: ['jquery', 'underscore'],
+      exports: 'Backbone'
     },
 
     'bootstrap/affix': ['jquery'],
@@ -25,8 +32,8 @@ require.config({
     'bootstrap/transition': ['jquery'],
 
     'app/templates': {
-      deps: ['handlebars', 'ember'],
-      exports: 'Ember.TEMPLATES'
+      deps: ['handlebars'],
+      exports: 'JST'
     }
   }
 });
