@@ -40,8 +40,7 @@ require.config({
 
 // Initialize the app.
 require([
-
-  'jquery',
+  'app/app',
 
   // The order of this is significant
   'bootstrap/transition',
@@ -57,6 +56,7 @@ require([
   'bootstrap/tab',
   'bootstrap/affix',
 
-  'app/app',
-
-]);
+], function (Checkoff) {
+  'use strict';
+  Checkoff.start();
+});

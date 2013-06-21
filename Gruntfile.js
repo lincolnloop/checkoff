@@ -19,7 +19,8 @@ module.exports = function (grunt) {
       compile: {
         options: {
           processName: function (sourceFile) {
-            return sourceFile.replace(/public\/templates\//, '');
+            return sourceFile.replace(/public\/templates\//, '')
+                             .replace(/\.handlebars$/, '');
           }
         },
         files: {

@@ -8,6 +8,8 @@ define(function (require) {
       Logger = require('app/logger'),
       logger = new Logger();
 
+  Checkoff.VERSION = '0.1.0';
+
   Checkoff.addRegions({
     navRegion: '#nav',
     mainRegion: '#main'
@@ -21,8 +23,8 @@ define(function (require) {
     logger.debug('Handlebars.VERSION: ' + Handlebars.VERSION);
     logger.debug('-------------------------------');
 
-    Backbone.history.start({pushState: true});
     new AppRouter();
+    Backbone.history.start({pushState: true});
   });
 
   return Checkoff;
