@@ -16,5 +16,5 @@ define(function (require) {
     }
   });
 
-  return AppRouter;
+  return new AppRouter();
 });

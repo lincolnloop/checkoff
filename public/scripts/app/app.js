@@ -4,7 +4,6 @@ define(function (require) {
       logger = require('app/logger'),
       Handlebars = require('handlebars'),
       Marionette = require('backbone.marionette'),
-      AppRouter = require('app/router'),
       appLayout = require('app/layout');
 
   var Checkoff = new Marionette.Application();
@@ -21,11 +20,12 @@ define(function (require) {
     logger.debug('Handlebars.VERSION: ' + Handlebars.VERSION);
     logger.debug('-------------------------------');
 
+    Checkoff.appRouter = require('app/router');
+
+    Backbone.history.start({pushState: true});
+
     // Show the application Layout
     Checkoff.appRegion.show(appLayout);
-
-    new AppRouter();
-    Backbone.history.start({pushState: true});
   });
 
   return Checkoff;
