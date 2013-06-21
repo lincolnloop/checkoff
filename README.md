@@ -1,17 +1,29 @@
 # Checkoff
 
+This is a learning project, intended to explore fully client-side web
+applications and hashing out patterns and best practices. The goal is to learn
+how to make web applications that can deliver an experience just as rich and
+responsive as a native app by handling as much of the logic as possible on the
+device itself.
+
+This app will eventually be backend agnostic, but it is being built initially
+in Django because that is what we are most familiar with. For now, we're using
+Backbone augmented with additional tools along with Handlebars for templating.
+
+
 ## Project Setup
 
 From the root project directory:
 
+    $ mkvirtualenv checkoff
+    $ pip install -r requirements.txt
     $ npm install -g grunt-cli
     $ npm install
-    $ grunt
 
-This fires up a static server that offers up 'static/index.html' file, or
-delivers static files with common file extensions defined in the Gruntfile. It
-will watch for changes and automatically reload the site in the browser,
-without needing you to hit "refresh".
+At this point, you can fire up runserver. It will fire up Grunt as a child
+process to watch JavaScript templates and Less styles, and set up a livereload
+server to automatically refresh as you save files.
+
 
 ## Config
 

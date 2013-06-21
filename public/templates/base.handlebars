@@ -5,15 +5,15 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    {{#linkTo index class="navbar-brand"}}Checkoff{{/linkTo}}
+    {{!#linkTo index class="navbar-brand"}}Checkoff{{!/linkTo}}
     <div class="nav-collapse navbar-inverse-collapse collapse" style="height: 0px;">
       <ul class="nav navbar-nav">
-        <li>{{#linkTo index}}Home{{/linkTo}}</li>
-        <li>{{#linkTo checklists.index}}Checklists{{/linkTo}}</li>
-        <li>{{#linkTo projects.index}}Projects{{/linkTo}}</li>
+        <li>{{!#linkTo index}}Home{{!/linkTo}}</li>
+        <li>{{!#linkTo checklists.index}}Checklists{{!/linkTo}}</li>
+        <li>{{!#linkTo projects.index}}Projects{{!/linkTo}}</li>
       </ul>
     </div>
   </div>
 </div>
 
-{{outlet}}
+{{!outlet}}

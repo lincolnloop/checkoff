@@ -7,39 +7,39 @@ module.exports = function (grunt) {
     less: {
       dev: {
         options: {
-          paths: ['checkoff/static/less']
+          paths: ['public/styles/less']
         },
         files: {
-          'checkoff/static/css/style.css': 'checkoff/static/less/style.less'
+          'public/styles/style.css': 'public/styles/less/style.less'
         }
       }
     },
 
-    emberTemplates: {
+    handlebars: {
       compile: {
         options: {
-          templateName: function (sourceFile) {
-            return sourceFile.replace(/checkoff\/static\/templates\//, '');
+          processName: function (sourceFile) {
+            return sourceFile.replace(/public\/templates\//, '');
           }
         },
         files: {
-          'checkoff/static/js/app/templates.js': 'checkoff/static/templates/**/*.handlebars'
+          'public/scripts/app/templates.js': 'public/templates/**/*.handlebars'
         }
       }
     },
 
     watch: {
       javascript: {
-        files: ['checkoff/static/js/**/*.js'],
+        files: ['public/scripts/**/*.js'],
         options: {livereload: true}
       },
       handlebars: {
-        files: 'checkoff/static/templates/**/*.handlebars',
-        tasks: ['emberTemplates'],
+        files: 'public/templates/**/*.handlebars',
+        tasks: ['handlebars'],
         options: {livereload: true}
       },
       less: {
-        files: 'checkoff/static/less/**/*.less',
+        files: 'public/styles/less/**/*.less',
         tasks: ['less'],
         options: {livereload: true}
       }
@@ -48,8 +48,8 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-ember-templates');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-handlebars');
 
-  grunt.registerTask('default', ['less', 'emberTemplates', 'watch']);
+  grunt.registerTask('default', ['less', 'handlebars', 'watch']);
 };

@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: '/static/js/vendor',
+  baseUrl: '/static/scripts/vendor',
   paths: {
     app: '../app'
   },
@@ -7,21 +7,8 @@ require.config({
     'jquery': {
       exports: '$'
     },
-
     'handlebars': {
       exports: 'Handlebars'
-    },
-    'ember': {
-      deps: ['jquery', 'handlebars'],
-      exports: 'Ember'
-    },
-    'ember-data': {
-      deps: ['ember'],
-      exports: 'DS'
-    },
-    'localstorage_adapter': {
-      deps: ['ember-data'],
-      exports: 'DS.LSAdapter'
     },
 
     'bootstrap/affix': ['jquery'],
@@ -63,22 +50,6 @@ require([
   'bootstrap/tab',
   'bootstrap/affix',
 
-  // Once the app is more complete, break this apart so that the whole thing
-  // doesn't have to be loaded all at once.
   'app/app',
-  'app/templates',
-  'app/checklists/models/checklist',
-  'app/checklists/models/item',
-  'app/checklists/controllers/new',
-  'app/checklists/controllers/edit',
-  'app/checklists/controllers/delete',
-  'app/projects/models/project',
-  'app/projects/models/project_checklist',
-  'app/projects/models/checklist_item',
-  'app/projects/controllers/new',
-  'app/projects/controllers/edit',
-  'app/projects/controllers/delete',
-  'app/auth/models/user',
-  'app/router'
 
 ]);
