@@ -36,6 +36,7 @@ require.config({
 // Initialize the app.
 require([
   'app/app',
+  'app/router',
 
   // The order of this is significant
   'bootstrap/transition',

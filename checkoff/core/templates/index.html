@@ -10,7 +10,12 @@
 
   <script src="{{ STATIC_URL }}scripts/vendor/modernizr.js"></script>
   <script data-main="{{ STATIC_URL }}scripts/main" src="{{ STATIC_URL }}scripts/vendor/require.js"></script>
-  {% if debug %}<script src="http://localhost:35729/livereload.js"></script>{% endif %}
+  {% if debug %}
+    <script src="http://localhost:35729/livereload.js"></script>
+    <script>
+      window.DEBUG = true;
+    </script>
+  {% endif %}
 </head>
 <body></body>
 </html>
