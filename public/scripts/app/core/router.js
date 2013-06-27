@@ -1,15 +1,17 @@
 define(function (require) {
   'use strict';
-  var Checkoff = require('app/app'),
-      BaseRouter = require('app/core/base_router'),
+  var Backbone = require('backbone'),
+      Checkoff = require('app/app'),
+      coreUrls = require('app/core/urls'),
       appLayout = require('app/core/views/layout'),
       indexView = require('app/core/views/index'),
       log = require('loglevel');
 
-  var AppRouter = BaseRouter.extend({
-    routes: {
-      '': 'index'
-    },
+  var routes = {'': 'index'};
+  routes[coreUrls.urls['project']] = 'project';
+
+  var AppRouter = Backbone.Router.extend({
+    routes: routes,
 
     index: function () {
       appLayout.mainRegion.show(indexView);
