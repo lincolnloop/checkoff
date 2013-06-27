@@ -26,7 +26,7 @@ define(function (require) {
      */
     appRouter.on('route', function (name, params) {
       var msg = '[route] Transitioned to the "' + name + '" route';
-      if (params) {
+      if (params.length) {
         msg += ' with the params "' + params + '"';
       }
       log.debug(msg);
