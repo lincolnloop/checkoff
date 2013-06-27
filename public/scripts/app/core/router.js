@@ -1,14 +1,14 @@
 define(function (require) {
   'use strict';
-  var BaseRouter = require('app/base/router'),
-      appLayout = require('app/core/views/layout'),
+  var appLayout = require('app/core/views/layout'),
       indexView = require('app/core/views/index'),
       settings = require('app/settings'),
       log = require('loglevel');
 
-  var AppRouter = BaseRouter.extend({
+  var AppRouter = Backbone.Router.extend({
     routes: {
       '': 'index',
+      '/': 'index',
       'projects': 'projectsIndex',
       'projects/:id': 'projectDetail'
     },
@@ -24,8 +24,12 @@ define(function (require) {
     /*
      * Log routes if the setting is enabled on the Checkoff object
      */
-    appRouter.on('route', function (name) {
-      log.debug('[route] Transitioned to the "' + name + '" route.');
+    appRouter.on('route', function (name, params) {
+      var msg = '[route] Transitioned to the "' + name + '" route';
+      if (params) {
+        msg += ' with the params "' + params + '"';
+      }
+      log.debug(msg);
     });
   }
 

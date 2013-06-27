@@ -1,6 +1,6 @@
 define(function (require) {
   'use strict';
-  var Templates = require('app/core/templates'),
+  var Templates = require('app/templates'),
       Marionette = require('backbone.marionette');
 
   var IndexView = Marionette.ItemView.extend({
