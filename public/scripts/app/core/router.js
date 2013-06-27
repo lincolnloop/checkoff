@@ -1,14 +1,12 @@
 define(function (require) {
   'use strict';
-  var Backbone = require('backbone'),
-      Checkoff = require('app/app'),
-      appLayout = require('app/layout'),
-      indexView = require('app/index'),
+  var Checkoff = require('app/app'),
+      BaseRouter = require('app/core/base_router'),
+      appLayout = require('app/core/views/layout'),
+      indexView = require('app/core/views/index'),
       log = require('loglevel');
 
-  var AppRouter = Backbone.Router.extend({
-    initialize: function () {},
-
+  var AppRouter = BaseRouter.extend({
     routes: {
       '': 'index'
     },

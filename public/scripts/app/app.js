@@ -5,7 +5,7 @@ define(function (require) {
       log = require('loglevel'),
       Handlebars = require('handlebars'),
       Marionette = require('backbone.marionette'),
-      appLayout = require('app/layout');
+      appLayout = require('app/core/views/layout');
 
   var Checkoff = new Marionette.Application({
     /*
