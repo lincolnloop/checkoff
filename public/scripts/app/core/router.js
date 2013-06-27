@@ -1,14 +1,16 @@
 define(function (require) {
   'use strict';
-  var Checkoff = require('app/app'),
-      BaseRouter = require('app/core/base_router'),
+  var BaseRouter = require('app/base/router'),
       appLayout = require('app/core/views/layout'),
       indexView = require('app/core/views/index'),
+      settings = require('app/settings'),
       log = require('loglevel');
 
   var AppRouter = BaseRouter.extend({
     routes: {
-      '': 'index'
+      '': 'index',
+      'projects': 'projectsIndex',
+      'projects/:id': 'projectDetail'
     },
 
     index: function () {
@@ -18,7 +20,7 @@ define(function (require) {
 
   var appRouter = new AppRouter();
 
-  if (Checkoff.LOG_ROUTES) {
+  if (settings.LOG_ROUTES) {
     /*
      * Log routes if the setting is enabled on the Checkoff object
      */

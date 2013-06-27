@@ -33,12 +33,9 @@ require.config({
   }
 });
 
-// Initialize the app and include any requirements that need to be loaded up
-// front rather than imported when needed.
+// Initialize the app
 require([
   'app/app',
-  'app/core/router',
-  'app/core/helpers/url',
 
   // The order of this is significant
   'bootstrap/transition',

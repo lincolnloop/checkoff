@@ -1,19 +1,24 @@
 define(function (require) {
   'use strict';
   var _ = require('underscore'),
-      log = require('loglevel'),
       Backbone = require('backbone'),
+      settings = require('app/settings'),
+      log = require('loglevel'),
 
-      // Copied from backbone.js
+      // Tweaked versions of the regexes in Backbone itself
       optionalParam = /\((.*?)\)/g,
-      namedParam    = /(\(\?)?:\w+/g,
+      namedParam    = /(?:\(\?)?:(\w+)/g;
       splatParam    = /\*\w+/g;
 
   var BaseRouter = Backbone.Router.extend({
     /*
      * A router that implements a reverse function. This will not work with
-     * arbitrary regexes. Params and optional params should be an object,
-     * splats should be an array.
+     * arbitrary regexes, and will simply return nothing in that case. Params
+     * and optional params should be an object, splats should be an array.
+     *
+     * It's important to note that if you have multiple routes pointing to the
+     * same method, only the last route defined will be used because of how
+     * the Underscore 'invert' function works.
      *
      * Usage:
      *
@@ -65,7 +70,7 @@ define(function (require) {
       if (_.has(this.reverseRouteMap, name)) {
         var route = this.reverseRouteMap[name];
         if (!_.isRegExp(route)) {
-          log('test');
+          log.debug('test');
         }
       }
     }

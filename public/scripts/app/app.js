@@ -2,18 +2,17 @@ define(function (require) {
   'use strict';
   var jQuery = require('jquery'),
       Backbone = require('backbone'),
-      log = require('loglevel'),
       Handlebars = require('handlebars'),
       Marionette = require('backbone.marionette'),
+      log = require('loglevel'),
+      settings = require('app/settings'),
       appLayout = require('app/core/views/layout');
 
-  var Checkoff = new Marionette.Application({
-    /*
-     * Establish a few settings.
-     */
-    VERSION: '0.1.0',
-    LOG_ROUTES: true
-  });
+  // Include any requirements that need to be loaded along with the app, like
+  // template helpers.
+  require('app/core/helpers/url');
+
+  var Checkoff = new Marionette.Application(settings);
 
   Checkoff.addRegions({appRegion: 'body'});
 
